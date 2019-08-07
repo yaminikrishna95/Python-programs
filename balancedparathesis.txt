@@ -1,0 +1,14 @@
+stack = "([{}])()"
+stack1=list(stack)
+s=[]
+for i in range(len(stack1)):
+    if (stack1[i] == '(' or stack1[i] == '[' or stack1[i] == '{') : 
+      s.append(stack1[i])
+       
+    elif(stack1[i] == ')' or stack1[i] == ']' or stack1[i] == '}'):
+      s.pop()
+        
+if(len(s)== 0):
+  print("balanced")
+else:
+  print("not balanced")
